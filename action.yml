@@ -1,0 +1,15 @@
+name: Fetch GHAS Scan Data
+
+description: Fetches GHAS scan data and uploads it as an artifact.
+
+inputs:
+  repo_url:
+    description: 'The repository URL to fetch scan data from.'
+    required: true
+  token:
+    description: 'The GitHub token for authentication.'
+    required: true
+
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
