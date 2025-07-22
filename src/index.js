@@ -6,9 +6,11 @@ const { exec } = require('child_process');
 async function fetchAndDumpScanData() {
     try {
         // Get inputs from the GitHub Action
+        console.log('Fetching inputs...');
         const repoUrl = core.getInput('repo_url');
         const token = core.getInput('token');
-
+        console.log(`Repository URL: ${repoUrl}`);
+        console.log("Token:" );
         // Extract owner and repo from the repo URL
         const match = repoUrl.match(/github\.com\/(.+?)\/(.+?)(\.git|$)/);
         if (!match) {

@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "ncc": "^0.3.6"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.38.3"
+  }
+}
