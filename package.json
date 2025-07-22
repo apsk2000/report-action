@@ -1,5 +1,8 @@
 {
   "dependencies": {
+    "@actions/core": "^1.11.1",
+    "@actions/github": "^6.0.1",
+    "axios": "^1.10.0",
     "ncc": "^0.3.6"
   },
   "devDependencies": {
