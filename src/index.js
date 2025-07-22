@@ -21,6 +21,7 @@ async function fetchAndDumpScanData() {
 
         // Construct the API URL
         const apiUrl = `https://api.github.com/repos/${owner}/${repo}/code-scanning/alerts`;
+        console.log(`API URL: ${apiUrl}`);
 
         // Make the API call
         const response = await axios.get(apiUrl, {
