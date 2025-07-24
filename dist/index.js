@@ -35791,17 +35791,20 @@ async function fetchAndDumpScanData() {
         console.log(`Repository URL: ${repoUrl}`);
         console.log("Token:" );
         // Extract owner and repo from the repo URL
-        const match = repoUrl.match(/github\.com\/(.+?)\/(.+?)(\.git|$)/);
-        if (!match) {
-            throw new Error('Invalid repository URL');
-        }
-        const owner = match[1];
-        const repo = match[2];
+        // const match = repoUrl.match(/github\.com\/(.+?)\/(.+?)(\.git|$)/);
+        // if (!match) {
+        //     throw new Error('Invalid repository URL');
+        // }
+        // const owner = match[1];
+        // const repo = match[2];
 
-        // Construct the API URL
-        const apiUrl = `https://api.github.com/repos/${owner}/${repo}/code-scanning/alerts`;
+        // // Construct the API URL
+        // const apiUrl = `https://api.github.com/repos/${owner}/${repo}/code-scanning/alerts`;
+        // console.log(`API URL: ${apiUrl}`);
+        
+        const apiUrl = `https://api.github.com/repos/${repoUrl}/code-scanning/alerts`;
         console.log(`API URL: ${apiUrl}`);
-        console.log(`Bearer ${token}`)
+        console.log(`Bearer ${token}`);
 
         // Make the API call
         const response = await axios.get(apiUrl, {
